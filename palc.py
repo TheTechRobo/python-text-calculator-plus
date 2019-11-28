@@ -1,5 +1,6 @@
 #SETUP
 import os #import os
+from cprint import cprint
 try:
     from ex import * #import defined functions from file
     from root import * #import defined functions from other file
