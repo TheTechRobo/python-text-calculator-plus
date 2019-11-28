@@ -1,31 +1,31 @@
 #SETUP
 import os #import os
 try:
-    from ex import * #import file
-    from root import * #import other file
+    from ex import * #import defined functions from file
+    from root import * #import defined functions from other file
 except IOError:
-    print('''There was an error with importing the necessary elements: ex.py and/or root.py
+    cprint.err('''There was an error with importing the necessary elements: ex.py and/or root.py
     Make sure you're in the correct directory and the files exist.
     You cannot use the following commands: ex and/or root''')
-print("Please wait")
+cprint.ok("Please wait")
 print()
-def .():
+def .(): #For leeway
     macwin = input("Is your os the following: Windows? (Y/n)")
-if macwin == "Y":
-    print("Ok, OS set to: Windows")
-    os.system('cls')
-elif macwin == "y":
-    print("Set os to: Windows")
-    os.system('cls')
-elif macwin == "N":
-    print("Set os to: linux")
-    os.system('clear')
-elif macwin == "n":
-    print("Set os to: Linux")
-    os.system('clear')
-else:
-    print("Please, Type in the answer to the question (y/n)")
-    .()
+    if macwin == "Y":
+        print("Ok, OS set to: Windows")
+        os.system('cls')
+    elif macwin == "y":
+        print("Set os to: Windows")
+        os.system('cls')
+    elif macwin == "N":
+        print("Set os to: linux")
+        os.system('clear')
+    elif macwin == "n":
+        print("Set os to: Linux")
+        os.system('clear')
+    else:
+        print("Please, Type in the answer to the question (y/n)")
+        .()
 def e():
 	exit()
 def palc():
@@ -39,7 +39,7 @@ def palc():
            print('''
             Currently supported: multiplication (*), division (/), addition (+), square (sq), subtraction (-), modulo (%), area (#), volume (vol), cube ({}), cube twice ({2}), exponents (ex), root (root), equals (=), and convert number systems (base). Type exit to exit. Commands are case-sensitive
             To access support: go to https://github.com/thetechrobo/support/
-            To modify Palc: go to https://github.com/thetechrobo/python-text-calculator/
+            To modify Palc Plus: go to https://github.com/thetechrobo/python-text-calculator-plus/
             ''')
 #MULTIPLICATION
        elif calc == "*":
@@ -59,8 +59,13 @@ def palc():
             print()
 #SQUARE
        elif calc == "sq":
-            print("Please note this is the same as running [] or ex")
-            ex2()
+            cprint.warn("Please note this is the same as running [] or ex")
+            cprint.ok("Loading ex.py")
+            try:
+                ex2()
+            except:
+                cprint.err("Error in running ex2(), please check to see if ex.py is in the same dir as palc.py")
+                cprint.info("Continuing with program")
        elif calc == "[]":
             print("Please note it's the same as running sq or ex")
             ex2()
@@ -178,9 +183,9 @@ def palc():
             try:
                 exponent2Use = int(input("Exponent? (Coded: 2,3,4,5)"))
             except ValueError:
-                print("ERROR: try typing in a number!")
+                cprint.err("ERROR: try typing in a number!")
             if exponent2Use == 2:
-                print("Please Note; this is the same as running sq or []")
+                cprint.info("Please Note; this is the same as running sq or []")
                 ex2()
             elif exponent2Use == 3:
                 ex3()
@@ -246,16 +251,16 @@ Type 2, 8, 10, or 16: '''))
            print("=" +result)
 #OTHERWISE
        else:
-            print('''
+            cprint.info('''
             I don't understand your request. Here are the currently supported calculations: 
             * or x; / or div; -, min, or sub; + or add; % or mod (modulo); sq or [] (square); ar or # (area); vol (volume); {} (cube); ex (exponents); root (roots); = (equals); and base (convert number system). Sorry for the inconvenience
             ''')
 print()
-print("Welcome to Palc!")
+cprint.info("Welcome to Palc!")
 try:
     palc() #run the Calc() command above
 except KeyboardInterrupt:
-    print("\nNote that you CAN type exit instead of the interrupt key")
+    cprint.info("Note that you CAN use exit instead of the interrupt key... just an FYI...")
     exit()
 except ValueError:
     print("You typed in an invalid integer / float")
