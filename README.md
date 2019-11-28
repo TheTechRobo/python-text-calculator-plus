@@ -1,4 +1,4 @@
-# python-text-calculator
+# python-text-calculator-plus
 
 
 This is a Python script I forked when I wanted to learn math in Python.
@@ -22,3 +22,10 @@ Thank you for your cooperation -- I get too much spam :wink:
 
 ###### Forked Version 0.3.2
 ###### Forked prerelease 0.4-omega.3
+
+
+
+# About the plus version
+
+The PLUS version basically includes cPrint and other nice features are coming soon, please stay tuned.  
+Maybe I'll merge it into Palc
