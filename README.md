@@ -28,4 +28,5 @@ Thank you for your cooperation -- I get too much spam :wink:
 # About the plus version
 
 The PLUS version basically includes cPrint and other nice features are coming soon, please stay tuned.  
-Maybe I'll merge it into Palc
+Maybe I'll merge it into Palc.  
+palc+ also gets updates Faster.
