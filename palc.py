@@ -27,6 +27,27 @@ def .(): #For leeway
     else:
         print("Please, Type in the answer to the question (y/n)")
         .()
+def ex():
+    try:
+        exponent2Use = int(input("Exponent? (Coded: 2,3,4,5)"))
+        except ValueError:
+            cprint.err("ERROR: try typing in a number!")
+        if exponent2Use == 2:
+            cprint.info("Please Note; this is the same as running sq or []")
+            ex2()
+        elif exponent2Use == 3:
+            cprint.info("Please note; this is the same as running cu or {}")
+            ex3()
+        elif exponent2Use == 4:
+            ex4()
+        elif exponent2Use == 5:
+            ex5()
+        elif exponent2Use == 1:
+            ex1()
+        elif exponent2Use == 6:
+            ex6()
+        else:
+            print("ERROR: not coded. (Coded: 1 2 3 4 5 6)")
 def e():
 	exit()
 def palc():
@@ -181,25 +202,11 @@ def palc():
             exit()
 #EXPONENTS (had the idea during bike ride on 18/9/2019 19hsomething after the BBQ)
        elif calc == "ex":
-            try:
-                exponent2Use = int(input("Exponent? (Coded: 2,3,4,5)"))
-            except ValueError:
-                cprint.err("ERROR: try typing in a number!")
-            if exponent2Use == 2:
-                cprint.info("Please Note; this is the same as running sq or []")
-                ex2()
-            elif exponent2Use == 3:
-                ex3()
-            elif exponent2Use == 4:
-                ex4()
-            elif exponent2Use == 5:
-                ex5()
-            elif exponent2Use == 1:
-                ex1()
-            elif exponent2Use == 6:
-                ex6()
-            else:
-                print("ERROR: not coded. (Coded: 1 2 3 4 5 6)")
+            ex()
+       elif calc == "pwr":
+            ex()
+       elif calc == "power":
+            ex()
 #ROOTS
        elif calc == "root":
             root = input("Square root or cube root?(square/cube case-sensitive)")
@@ -254,7 +261,7 @@ Type 2, 8, 10, or 16: '''))
        else:
             cprint.info('''
             I don't understand your request. Here are the currently supported calculations: 
-            * or x; / or div; -, min, or sub; + or add; % or mod (modulo); sq or [] (square); ar or # (area); vol (volume); {} (cube); ex (exponents); root (roots); = (equals); and base (convert number system). Sorry for the inconvenience
+            * or x; / or div; -, min, or sub; + or add; % or mod (modulo); sq or [] (square); ar or # (area); vol (volume); {} (cube); ex or pwr or power (exponents); root (roots); = (equals); and base (convert number system). Sorry for the inconvenience
             ''')
 print()
 cprint.info("Welcome to Palc!")
