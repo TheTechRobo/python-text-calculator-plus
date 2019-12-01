@@ -4,7 +4,7 @@ from cprint import cprint
 try:
     from ex import * #import defined functions from file
     from root import * #import defined functions from other file
-except IOError:
+except ImportError or IOError:
     cprint.err('''There was an error with importing the necessary elements: ex.py and/or root.py
     Make sure you're in the correct directory and the files exist.
     You cannot use the following commands: ex and/or root''')
@@ -28,10 +28,7 @@ def leeway(): #For leeway
         print("Please, Type in the answer to the question (y/n)")
         leeway()
 def ex(): #exponents
-    if exponent2Use == 1:
-        ex1()
-    else:
-        rex()
+    rex()
 def e():
 	exit()
 def palc():
@@ -239,7 +236,7 @@ Type 2, 8, 10, or 16: '''))
                 print(printThis)
 #ORD
        elif calc == "ord":
-           result = ord(int(input("Type in the number to ord: "))
+           result = ord(int(input("Type in the number to ord: ")))
            print("=" +result)
 #OTHERWISE
        else:
@@ -256,6 +253,6 @@ except KeyboardInterrupt:
     exit()
 except ValueError:
     print("You typed in an invalid integer / float")
-except:
-    print("An unknown error occured.") #It was commented because I was debugging
+#except:
+    #print("An unknown error occured.") #It was commented because I was debugging
 #EOF

@@ -1,3 +1,4 @@
+from cprint import cprint
 def ex1():
 	cprint.err("Unbelievable!")
 	print("I hope you're joking — you're asking this math: " +num2Use)
@@ -15,5 +16,6 @@ def rex():
         cprint.info("PLEASE NOTE that this is the same as typing {} or cu")
     elif pwrNum == 1:
         ex1()
-    cprint.ok('''
-    =''', pwrNum ** exNum)
+    print()
+    result = '=', exNum ** pwrNum
+    cprint.ok(result)
