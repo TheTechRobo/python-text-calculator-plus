@@ -27,7 +27,7 @@ def .(): #For leeway
     else:
         print("Please, Type in the answer to the question (y/n)")
         .()
-def ex():
+def ex(): #exponents
     try:
         exponent2Use = int(input("Exponent? (Coded: 2,3,4,5)"))
         except ValueError:
@@ -42,10 +42,8 @@ def ex():
             ex4()
         elif exponent2Use == 5:
             ex5()
-        elif exponent2Use == 1:
+        if exponent2Use == 1:
             ex1()
-        elif exponent2Use == 6:
-            ex6()
         else:
             print("ERROR: not coded. (Coded: 1 2 3 4 5 6)")
 def e():
