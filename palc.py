@@ -255,7 +255,7 @@ except KeyboardInterrupt:
     cprint.info("\nNote that you CAN use exit instead of the interrupt key... just an FYI...")
     exit()
 except ValueError:
-    print("You typed in an invalid integer / float")
+    cprint.err("You typed in an invalid integer / float")
 except:
-    print("An unknown error occured.") #It was commented because I was debugging
+    cprint.err("An unknown error occured.") #It was commented because I was debugging
 #EOF
