@@ -28,24 +28,10 @@ def .(): #For leeway
         print("Please, Type in the answer to the question (y/n)")
         .()
 def ex(): #exponents
-    try:
-        exponent2Use = int(input("Exponent? (Coded: 2,3,4,5)"))
-        except ValueError:
-            cprint.err("ERROR: try typing in a number!")
-        if exponent2Use == 2:
-            cprint.info("Please Note; this is the same as running sq or []")
-            ex2()
-        elif exponent2Use == 3:
-            cprint.info("Please note; this is the same as running cu or {}")
-            ex3()
-        elif exponent2Use == 4:
-            ex4()
-        elif exponent2Use == 5:
-            ex5()
-        if exponent2Use == 1:
-            ex1()
-        else:
-            print("ERROR: not coded. (Coded: 1 2 3 4 5 6)")
+    if exponent2Use == 1:
+        ex1()
+    else:
+        rex()
 def e():
 	exit()
 def palc():
