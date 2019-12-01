@@ -238,9 +238,12 @@ Type 2, 8, 10, or 16: '''))
        elif calc == "ord":
            result = ord(int(input("Type in the number to ord: ")))
            print("=" +result)
+#ANOTHER EASTER EGG!!
+       elif calc == "398247942394729387498324738432748923":
+           cprint.fatal("7924873948273", interrupt=True)
 #OTHERWISE
        else:
-            cprint.info('''
+            cprint.err('''
             I don't understand your request. Here are the currently supported calculations: 
             * or x; / or div; -, min, or sub; + or add; % or mod (modulo); sq or [] (square); ar or # (area); vol (volume); {} (cube); ex or pwr or power (exponents); root (roots); = (equals); and base (convert number system). Sorry for the inconvenience
             ''')
@@ -249,10 +252,10 @@ cprint.info("Welcome to Palc!")
 try:
     palc() #run the Calc() command above
 except KeyboardInterrupt:
-    cprint.info("Note that you CAN use exit instead of the interrupt key... just an FYI...")
+    cprint.info("\nNote that you CAN use exit instead of the interrupt key... just an FYI...")
     exit()
 except ValueError:
     print("You typed in an invalid integer / float")
-#except:
-    #print("An unknown error occured.") #It was commented because I was debugging
+except:
+    print("An unknown error occured.") #It was commented because I was debugging
 #EOF
