@@ -10,7 +10,7 @@ except IOError:
     You cannot use the following commands: ex and/or root''')
 cprint.ok("Please wait")
 print()
-def .(): #For leeway
+def leeway(): #For leeway
     macwin = input("Is your os the following: Windows? (Y/n)")
     if macwin == "Y":
         print("Ok, OS set to: Windows")
