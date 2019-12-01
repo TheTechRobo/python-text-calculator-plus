@@ -26,7 +26,7 @@ def leeway(): #For leeway
         os.system('clear')
     else:
         print("Please, Type in the answer to the question (y/n)")
-        .()
+        leeway()
 def ex(): #exponents
     if exponent2Use == 1:
         ex1()
