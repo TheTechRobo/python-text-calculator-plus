@@ -33,8 +33,8 @@ def e():
 	exit()
 def palc():
     while True:
-       for i in range (1, 13): #print blank line 13 times
-            print()
+       input("Press ENTER to continue: ")
+       os.system('clear')
 #CALCULATION CHOICE
        calc = input("Calculation?  (type ? for help): ")
 #HELP
