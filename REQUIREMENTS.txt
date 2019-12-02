@@ -1,1 +1,2 @@
-cprint
+pip3 install cprint
+pip3 install py-getch
