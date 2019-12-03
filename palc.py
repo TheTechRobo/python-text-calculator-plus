@@ -198,7 +198,7 @@ def palc():
 #EASTER EGG!
        elif calc == "=":
             print()
-            number = input("Type in a number: "))
+            number = input("Type in a number: ")
             if number == 42:
                 print("=42 -- the answer to life, the universe, and everything")
             else:
@@ -256,6 +256,6 @@ except KeyboardInterrupt:
     exit()
 except ValueError:
     cprint.err("You typed in an invalid integer / float")
-#except:
-#    cprint.err("An unknown error occured.") #It was commented because I was debugging
+except:
+    cprint.err("An unknown error occured.") #It was commented because I was debugging
 #EOF
