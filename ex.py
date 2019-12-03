@@ -1,7 +1,7 @@
 from cprint import cprint
 def ex1():
-	cprint.err("Unbelievable!")
-	print("I hope you're joking — you're asking this math: " +num2Use)
+	cprint.fatal('''File "ex.py", line 10
+SyntaxError: not a chance''', interrupt=True)
 	print("There's not even any addition! The answer is " +num2Use)
 def rex():
     print()
