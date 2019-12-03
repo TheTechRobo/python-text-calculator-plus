@@ -1,10 +1,9 @@
 from cprint import cprint
 from sys import exit
 def ex1():
-	cprint.fatal('''File "ex.py", line 10
+    cprint.fatal('''File "ex.py", line 10
 SyntaxError: not a chance''')
     sys.exit()
-	print("There's not even any addition! The answer is " +num2Use)
 def rex():
     print()
     try:
