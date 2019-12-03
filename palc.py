@@ -229,15 +229,15 @@ Type 2, 8, 10, or 16: '''))
                 else:
                     print("type ord, binary, octo, hex")
                 printThis = "=" +str(result)
-                print(printThis)
+                cprint.ok(printThis)
             elif base == 16:
                 result = hex(int(input("Type the original number: "))) #
                 printThis = "=" +str(result)
-                print(printThis)
+                cprint.ok(printThis)
 #ORD
        elif calc == "ord":
            result = ord(int(input("Type in the number to ord: ")))
-           print("=" +result)
+           cprint.ok("=" +result)
 #ANOTHER EASTER EGG!!
        elif calc == "398247942394729387498324738432748923":
            cprint.fatal("7924873948273", interrupt=True)
