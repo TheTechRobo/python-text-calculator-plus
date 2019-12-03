@@ -33,13 +33,13 @@ def e():
 	exit()
 def palc():
     while True:
-       input("Press ENTER to continue: ")
+       os.system('read -sn 1 -p "Press any key to continue..."')
        os.system('clear')
 #CALCULATION CHOICE
        calc = input("Calculation?  (type ? for help): ")
 #HELP
        if calc == "?":
-           print('''
+           cprint.info('''
             Currently supported: multiplication (*), division (/), addition (+), square (sq), subtraction (-), modulo (%), area (#), volume (vol), cube ({}), cube twice ({2}), exponents (ex), root (root), equals (=), and convert number systems (base). Type exit to exit. Commands are case-sensitive
             To access support: go to https://github.com/thetechrobo/support/
             To modify Palc Plus: go to https://github.com/thetechrobo/python-text-calculator-plus/
