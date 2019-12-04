@@ -199,7 +199,7 @@ def palc():
        elif calc == "=":
             print()
             number = input("Type in a number: ")
-            if number == 42:
+            if number == "42":
                 print("=42 -- the answer to life, the universe, and everything")
             else:
                 print("=" +number)
