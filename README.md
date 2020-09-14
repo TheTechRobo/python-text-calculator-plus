@@ -1,5 +1,8 @@
 # python-text-calculator-plus
 
+## DISCONTINUED! 
+move to [here](http://github.com/thetechrobo/python-text-calculator)
+
 
 This is a Python script I forked when I wanted to learn math in Python.
 
